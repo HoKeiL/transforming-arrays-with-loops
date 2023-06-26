@@ -1,8 +1,5 @@
 /**
  * Write a function that takes an array of names, and returns an array with a greeting for each of those names: "Hello, <name>!".
- * 
- * 
- * 
  *  function name: greetingPlusNames
  * parameters:
  * - NAMES: array of strings
