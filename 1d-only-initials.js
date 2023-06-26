@@ -6,20 +6,28 @@
  * return: arr of string
  */
 
-function initials(names){
-	const newArr = [];
-	
-		for (const i of names){
-			const nameArray = i.split(" ")
-	  		const firstName = nameArray[0].charAt(0).toUpperCase()
-	  		const lastName = nameArray[nameArray.length - 1].charAt(0).toUpperCase()
-	  		newArr.push(firstName + "."+ lastName + ".")
-		}
-	
-	return newArr;
-	
-}
+function initials(name){
+	const initial = [];
+  
+	const splitedName = name.split(" ")
+	for (const i of splitedName) {
+  
+	  const firstName = i[0].charAt(0).toUpperCase()
+	  initial.push(firstName)
+	}
+  
+	const output = `${initial.join(".")}.`
+  
+	  return output;
+  
+  }
+
+  function initialsAll(arr){
+
+	return arr.map(initials);
+
+  }
 	
 
-console.log(initials(["Ash Ketchum", "Lucy Heartfilia", "Yugi Moto"]), ["A.K.", "L.H.", "Y.M."])
+console.log(initialsAll(["Ash Ketchum", "Lucy Heartfilia", "Yugi Moto"]), ["A.K.", "L.H.", "Y.M."])
 
